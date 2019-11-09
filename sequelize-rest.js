@@ -29,7 +29,7 @@ const Movie = db.define(
 );
 
 db.sync({ force: true })
-  .then(() => console.log("Tables created successfully"))
+  // .then(() => Movie.truncate())
   .then(() =>
     Promise.all([
       Movie.create({
